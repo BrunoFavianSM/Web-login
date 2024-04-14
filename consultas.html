@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Consultas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style type="text/css">
+    .navbar {
+  	backdrop-filter: blur(10px);
+	}
+    form {
+        background-color: rgba(255, 255, 255, 0.5);
+		    backdrop-filter: blur(20px);
+        width: 80%;
+        height: 600px;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+    body{
+		background-image: url('img/bg_4.jpg');
+		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
+	}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px;">
+		<a class="navbar-brand mr-4" href="index.html">Inicio</a>
+        <ul class="navbar-nav ">
+			<li class="nav-item">
+				<a class="nav-link mr-2" href="#" style="color:#fff;">Buscar empleo</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link mr-2" href="#" style="color:#fff;">Buscar empresas</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link mr-2" href="#" style="color:#fff;">Salarios</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link mr-2" href="#" style="color:#fff;">Formación</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link mr-2" href="#" style="color:#fff;">Noticias</a>
+			</li>
+		</ul>
+    </nav>
+
+    <br>
+    <form>
+        <div class="container">
+            <h2>Datos de Registro</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Especialidad</th>
+                        <th>Pais</th>
+                        <th>Edad</th>
+                        <th>Fecha de Registro</th>
+                        <!--<th>Salario</th> -->
+                        <!-- <th>Correo</th> -->
+                        <!-- <th>Contraseña</th> -->
+                    </tr>
+                </thead>
+                <tbody id="registrationTableBody">
+                    <tr>
+                        <td id="name"></td>
+                        <td id="lastname"></td>
+                        <td id="position"></td>
+                        <td id="ofice"></td>
+                        <td id="age"></td>
+                        <td id="stardate"></td>
+                        <!--<td id="salary"></td>-->
+                        <!-- <td id="email"></td> -->
+                        <!-- <td id="password"></td> -->
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+    <script>
+        // Retrieve data from local storage
+        var name = localStorage.getItem('name');
+        var lastname = localStorage.getItem('lastname');
+        var position = localStorage.getItem('position');
+        var ofice = localStorage.getItem('ofice');
+        var age = localStorage.getItem('age');
+        var stardate = localStorage.getItem('stardate');
+        var salary = localStorage.getItem('salary');
+        var email = localStorage.getItem('email');
+        var password = localStorage.getItem('password');
+
+        // Display data
+        document.getElementById('name').innerText = name;
+        document.getElementById('lastname').innerText = lastname;
+        document.getElementById('position').innerText = position;
+        document.getElementById('ofice').innerText = ofice;
+        document.getElementById('age').innerText = age;
+        document.getElementById('stardate').innerText = stardate;
+        document.getElementById('salary').innerText = salary;
+        document.getElementById('email').innerText = email;
+        document.getElementById('password').innerText = password;
+    </script>
+
+</body>
+</html>
